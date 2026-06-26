@@ -52,6 +52,10 @@ print(path.stem)
 print(path.suffix)
 print(path.parent)
 
+# Создать пустой файл:
+path = Path("users.txt")
+path.touch()
+
 # Поиск файлов
 for file in Path(".").glob("*.py"):
     print(file)
