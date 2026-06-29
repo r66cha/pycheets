@@ -1,4 +1,6 @@
-"""Скользящее окно - это фреймворк для решения задач, которые требуют поиска подстрок или подмассивов в массиве или строке."""
+"""Скользящее окно (Sliding Window)
+Фреймворк для решения задач, которые требуют поиска подстрок или подмассивов в массиве или строке
+"""
 
 
 # Окно фиксированного размера
@@ -26,7 +28,7 @@ def k_elements_max_sum(nums: list[int], k: int) -> int:
 
 nums_1 = [3, 2, 0, 9, 1, 2, 8, 5, 2]
 k_1 = 5
-print(k_elements_max_sum(nums_1, k_1))
+print(k_elements_max_sum(nums_1, k_1))  # 25
 
 # Green flags:
 # * Дана переменная обозначающая размер окна
@@ -67,7 +69,7 @@ def compress_ranges(nums: list[int]) -> list[str]:
 
 
 nums_2 = [1, 2, 3, 5, 8, 9, 14]
-print(compress_ranges(nums_2))
+print(compress_ranges(nums_2))  # ['1->3', '5', '8->9', '14']
 
 # Green flags:
 # * Нужно работать с подряд идущими непересекающимися группами элементов
@@ -111,7 +113,7 @@ def longest_ones_with_flips(nums: list[int], k: int) -> int:
 
 nums_3 = [1, 0, 1, 0, 1, 0, 1, 1]
 k_3 = 2
-print(longest_ones_with_flips(nums_3, k_3))
+print(longest_ones_with_flips(nums_3, k_3))  # 6
 
 # Green flags:
 # * Нужно найти самую длинную последовательность с определенными свойствами
@@ -124,5 +126,6 @@ from collections import Counter
 w = "aaabccccde"
 
 c = Counter(w)
+print(c)
 max_c = max(c.keys(), key=lambda k: c[k])
 print(max_c * c[max_c])
